@@ -1,4 +1,4 @@
-let apiKey = "DEMO_KEY"; // Cambiar por tu propia API key de NASA si la tienes
+let apiKey = "DEMO_KEY"; 
 let resultsDiv = document.getElementById("results");
 
 // Buscar por fecha
