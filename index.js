@@ -1,3 +1,6 @@
+let apiKey = "DEMO_KEY"; // Cambiar por tu propia API key de NASA si la tienes
+let resultsDiv = document.getElementById("results");
+
 // Buscar por fecha
 document.getElementById("searchByDate").addEventListener("click", () => {
   let date = document.getElementById("dateInput").value;
@@ -20,18 +23,24 @@ document.getElementById("searchRandom").addEventListener("click", () => {
     .catch(err => console.error(err));
 });
 
-// Mostrar resultados en tarjetas
+// Mostrar resultados (imágenes o videos)
 function showResults(dataArray) {
   resultsDiv.innerHTML = ""; // Limpiar resultados
   dataArray.forEach(item => {
+    let mediaContent = "";
+
     if (item.media_type === "image") {
-      resultsDiv.innerHTML += `
-        <div class="card">
-          <img src="${item.url}" alt="${item.title}">
-          <h3>${item.title}</h3>
-          <p>${item.explanation}</p>
-        </div>
-      `;
+      mediaContent = `<img src="${item.url}" alt="${item.title}" />`;
+    } else if (item.media_type === "video") {
+      mediaContent = `<iframe src="${item.url}" frameborder="0" allowfullscreen></iframe>`;
     }
+
+    resultsDiv.innerHTML += `
+      <div class="card">
+        ${mediaContent}
+        <h3>${item.title}</h3>
+        <p>${item.explanation}</p>
+      </div>
+    `;
   });
 }
