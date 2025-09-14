@@ -45,7 +45,7 @@ function showResults(dataArray) {
   });
 }
 
-// Botón Claro/Oscuro
+// Botón Claro/Oscuro (toggle theme)
 let toggleBtn = document.getElementById("toggleTheme");
 
 toggleBtn.addEventListener("click", () => {
