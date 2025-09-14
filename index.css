@@ -61,3 +61,33 @@ button:hover {
   font-size: 14px;
   text-align: justify;
 }
+
+#toggleTheme {
+  background-color: #415a77;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#toggleTheme:hover {
+  background-color: #778da9;
+}
+
+.light-mode {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.light-mode header, 
+.light-mode footer, 
+.light-mode .card {
+  background-color: #fff;
+  color: #000;
+}
+
+body, header, footer, .card {
+  transition: background-color 1s, color 1s;
+}

@@ -14,7 +14,7 @@ document.getElementById("searchByDate").addEventListener("click", () => {
     .catch(err => console.error(err));
 });
 
-// Buscar imágenes aleatorias
+// Imágenes aleatorias
 document.getElementById("searchRandom").addEventListener("click", () => {
   let count = document.getElementById("countInput").value;
   fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`)
@@ -23,9 +23,9 @@ document.getElementById("searchRandom").addEventListener("click", () => {
     .catch(err => console.error(err));
 });
 
-// Mostrar resultados (imágenes o videos)
+// Resultados
 function showResults(dataArray) {
-  resultsDiv.innerHTML = ""; // Limpiar resultados
+  resultsDiv.innerHTML = ""; 
   dataArray.forEach(item => {
     let mediaContent = "";
 
@@ -44,3 +44,16 @@ function showResults(dataArray) {
     `;
   });
 }
+
+// Botón Claro/Oscuro
+let toggleBtn = document.getElementById("toggleTheme");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains("light-mode")) {
+    toggleBtn.textContent = "🌕";
+  } else {
+    toggleBtn.textContent = "🌞";
+  }
+});
