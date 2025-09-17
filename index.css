@@ -46,8 +46,15 @@ header, footer {
   padding: 15px;
 }
 
-h1, h2 {
+h1{
   margin: 10px 0;
+}
+
+h2{
+  margin: 10px 0;
+  background-color: #1b263b;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 section {
