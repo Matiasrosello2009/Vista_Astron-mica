@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vista Astronomica</title>
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
   <nav>
     <h1>¡Tu <b>Vista Astronómica</b> en un click!</h1>
     <div class="cabecera">
-        <a href="#inicio">Inicio</a>
-        <a href="https://www.nasa.gov/es/" id="NASA">Visitar la web de La NASA</a>
-        <a href="https://apod.nasa.gov/apod/astropix.html" id="APOD">Visitar la APOD</a>
+      <a href="#inicio">Inicio</a>
+      <a href="https://www.nasa.gov/es/" id="NASA">Visitar la web de La NASA</a>
+      <a href="https://apod.nasa.gov/apod/astropix.html" id="APOD">Visitar la APOD</a>
     </div>
-</nav>
-<h1>¡Bienvenido/a!</h1>
+  </nav>
+  <div class="contenedor">
+    <h1>¡Bienvenido/a!</h1>
 
-<img id="logoNasa" src="NASA_logo.svg.png" alt="Logo de La NASA">
-
-<h2>Me presento...</h2>
- <div id="presentacion">
-  <p>¡Bienvenido a mi página! Soy Matias, pero prefiero que me digan Mati; me gusta leer, escribir, ver peliculas y amo escuchar música. El día de mañana me gustaría ser productor musical y artista musical. Ésta página la creé para una actividad escolar. </p>
- </div>
-
-<h2>¿Cómo funciona ésta página?</h2>
-<p>En ésta página puedes ver información básica de la APOD oficial de la NASA de forma "rápida", como por ejemplo, la foto de un día en específico (ingresando la fecha exacta dentro del campo de texto del apartado "Buscar imagen por fecha" y luego haciend click en "Mostrar") o mirar una cierta cantidad de fotos randoms (eligiendo la cantidad de imagenes que se quiere ver y haciendo click en "Mostrar"). Cada imagen se mostrará en targetas, junto con el nombre o título de la foto y una descripción de la misma. </p>
-
-  <div>
-    <h2>Buscar imagen por fecha</h2>
-    <input type="date" id="dateInput">
-    <button id="searchByDate">Buscar</button>
+    <img id="logoNasa" src="NASA_logo.svg.png" alt="Logo de La NASA">
+  
+    <h2>Me presento...</h2>
+    <div id="presentacion">
+      <p>¡Bienvenido a mi página! Soy Matias, pero prefiero que me digan Mati; me gusta leer, escribir, ver peliculas y
+        amo escuchar música. El día de mañana me gustaría ser productor musical y artista musical. Ésta página la creé
+        para una actividad escolar. </p>
+    </div>
+  
+    <h2>¿Cómo funciona ésta página?</h2>
+    <p>En ésta página puedes ver información básica de la APOD oficial de la NASA de forma "rápida", como por ejemplo, la
+      foto de un día en específico (ingresando la fecha exacta dentro del campo de texto del apartado "Buscar imagen por
+      fecha" y luego haciend click en "Mostrar") o mirar una cierta cantidad de fotos randoms (eligiendo la cantidad de
+      imagenes que se quiere ver y haciendo click en "Mostrar"). Cada imagen se mostrará en targetas, junto con el nombre
+      o título de la foto y una descripción de la misma. </p>
+  
+    <div>
+      <h2>Buscar imagen por fecha</h2>
+      <input type="date" id="dateInput">
+      <button id="searchByDate">Buscar</button>
+    </div>
+  
+    <div>
+      <h2>Imágenes aleatorias</h2>
+      <input type="number" id="countInput" min="1" max="5" value="1">
+      <button id="searchRandom">Mostrar</button>
+    </div>
+  
+    <div id="results"></div>
+  
+    <p>Cambiar el tono de la página alternando entre claro y oscuro. </p>
+  
+    <button id="toggleTheme">🌞</button>
+  
   </div>
-
-  <div>
-    <h2>Imágenes aleatorias</h2>
-    <input type="number" id="countInput" min="1" max="5" value="1">
-    <button id="searchRandom">Mostrar</button>
-  </div>
-
-  <div id="results"></div>
-
-<p>Cambiar el tono de la página alternando entre claro y oscuro. </p>
-
-  <button id="toggleTheme">🌞</button>
-
+ 
 
   <script src="index.js"></script>
 </body>
+
 </html>
