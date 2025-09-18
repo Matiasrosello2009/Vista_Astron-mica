@@ -124,11 +124,16 @@ button:hover {
 
 .light-mode header, 
 .light-mode footer, 
-.light-mode .card {
+.light-mode .card, 
+.light-mode nav {
   background-color: #fff;
   color: #000;
 }
 
-body, header, footer, .card {
+.light-mode h2 {
+  background-color: #929fd8;
+}
+
+body, header, footer, .card, nav, h2 {
   transition: background-color 1s, color 1s;
 }
